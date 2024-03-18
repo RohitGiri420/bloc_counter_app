@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CounterScreen extends StatefulWidget {
@@ -18,9 +19,10 @@ class _CounterScreenState extends State<CounterScreen> {
       ),
       
       floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           FloatingActionButton(onPressed: (){},child: Icon(Icons.add),),
-          FloatingActionButton(onPressed: (){},child: Icon(Icons.minimize),)
+          FloatingActionButton(onPressed: (){},child: Icon(CupertinoIcons.minus),)
         ],
       ),
     );
