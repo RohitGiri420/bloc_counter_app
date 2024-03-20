@@ -1,5 +1,7 @@
+import 'package:bloc_counter_app/Bloc/counterBloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 void main(){
@@ -9,7 +11,9 @@ void main(){
 class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return BlocProvider(
+      create: (context) => counterBloc(),
+        child: MaterialApp());
   }
 
 }
