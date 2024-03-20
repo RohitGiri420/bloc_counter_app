@@ -5,11 +5,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class counterBloc extends Bloc<counterEvent,counterState>{
   counterBloc():super(initialState()){
     on<incermentEvent>((event,emit){
-      emit(counterState(count: state.count++));
+      emit(counterState(count: state.count+1));
     });
 
     on<decrementEvent>((event,emit){
-      emit(counterState(count: state.count--));
+      emit(counterState(count: state.count-1));
     });
   }
 }
